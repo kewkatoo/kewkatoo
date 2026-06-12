@@ -1,28 +1,16 @@
 # Hi, I'm Aditya Rajesh Achary 👋
 
-Electronics & Computer Engineering student at Amrita Vishwa Vidyapeetham (2026), building at the intersection of **computer vision**, **ML systems**, and **embedded AI**. I care about making models that actually work in the real world — not just in notebooks.
+Electronics & Computer Engineering student at Amrita Vishwa Vidyapeetham, building at the intersection of **computer vision**, **ML systems**, and **embedded AI**. I care about making models that actually work in the real world — not just in notebooks.
 
 ---
 
-## What I work on
+## What I have worked on and still am working on:
 
 - End-to-end ML pipelines — from messy data to production-ready inference
 - Computer vision on both cloud and constrained edge hardware
 - Recommendation systems and data analytics pipelines
 - Embedded AI on microcontrollers and single-board computers
 - LLM workflows and NLP pipelines
-
----
-
-## Pinned Projects
-
-**[modified-ggcnn-grasping](https://github.com/AdityaAchary/modified-ggcnn-grasping)**
-Modified GGCNN for robotic grasping — core component of an ongoing low-cost prosthetic hand project combining EMG signal processing, vision-based control, and imitation learning.
-
-**[Music-Tracklist-Recommendation-System](https://github.com/AdityaAchary/Music-Tracklist-Recommendation-System)**
-Hybrid MFCC + DTW recommendation engine with Random Forest classification. Related research published — **94.2% accuracy** across 10 genres.
-
-> More projects incoming — food health AI system, smart helmet CV pipeline, poverty mapping with geospatial ML.
 
 ---
 
