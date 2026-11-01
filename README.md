@@ -10,9 +10,7 @@
   hardware integration and real-world interaction.
 </p>
 
-<p align="center">
-  <img src="assets/nav.svg" alt="dev, music, ui/ux" width="360"/>
-</p>
+
 
 <p align="center"><img src="assets/t-now.svg" alt="currently working on" width="100%"/></p>
 <p align="center">
