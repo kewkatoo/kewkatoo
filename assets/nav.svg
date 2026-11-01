@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="64" viewBox="0 0 360 64" role="img" aria-label="dev, music, ui/ux">
+<defs><linearGradient id="pg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9d6bff"/><stop offset="1" stop-color="#6d3df0"/></linearGradient>
+<filter id="gl" x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur stdDeviation="8"/></filter></defs>
+<style>
+text{font-family:Inter,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+
+text{font-size:15px;font-weight:600;text-anchor:middle}
+.hl{animation:hl 9s cubic-bezier(.65,0,.35,1) infinite}
+@keyframes hl{0%,28%{transform:translateX(0)}35%,61%{transform:translateX(120px)}68%,94%{transform:translateX(240px)}100%{transform:translateX(0)}}
+.l0{animation:l0 9s infinite}.l1{animation:l1 9s infinite}.l2{animation:l2 9s infinite}
+@keyframes l0{0%,28%{fill:#2a1a5e}34%,94%{fill:#f2eefb}100%{fill:#2a1a5e}}
+@keyframes l1{0%,28%{fill:#f2eefb}35%,61%{fill:#2a1a5e}67%,100%{fill:#f2eefb}}
+@keyframes l2{0%,61%{fill:#f2eefb}68%,94%{fill:#2a1a5e}100%{fill:#f2eefb}}
+</style>
+<rect x="2" y="10" width="356" height="50" rx="25" fill="#8b5cf6" opacity=".35" filter="url(#gl)"/>
+<rect x="2" y="2" width="356" height="56" rx="28" fill="url(#pg)"/>
+<rect class="hl" x="10" y="10" width="104" height="40" rx="20" fill="#f5efe3"/>
+<text class="l0" x="62" y="35">dev</text><text class="l1" x="182" y="35">music</text><text class="l2" x="302" y="35">ui/ux</text>
+</svg>

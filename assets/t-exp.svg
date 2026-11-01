@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="84" viewBox="0 0 900 84" role="img" aria-label="experience">
+<style>
+text{font-family:Inter,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+.tw{animation:tw 4s ease-in-out infinite}@keyframes tw{0%,100%{opacity:.3;transform:scale(.8)}50%{opacity:1;transform:scale(1.15)}}</style>
+<rect width="900" height="84" rx="18" fill="#0c0a13"/>
+<rect x=".5" y=".5" width="899" height="83" rx="18" fill="none" stroke="#2a2340"/>
+<text x="450" y="38" text-anchor="middle" font-size="20" font-weight="700" fill="#f2eefb">experience</text>
+<text x="450" y="62" text-anchor="middle" font-size="13" fill="#8b86a0">internship and giving back</text>
+<path class="tw" style="transform-origin:522.0px 31px" d="M522.0,24 Q522.0,31 529.0,31 Q522.0,31 522.0,38 Q522.0,31 515.0,31 Q522.0,31 522.0,24Z" fill="#a78bfa"/>
+</svg>

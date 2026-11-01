@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="84" viewBox="0 0 900 84" role="img" aria-label="areas of interest">
+<style>
+text{font-family:Inter,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+.tw{animation:tw 4s ease-in-out infinite}@keyframes tw{0%,100%{opacity:.3;transform:scale(.8)}50%{opacity:1;transform:scale(1.15)}}</style>
+<rect width="900" height="84" rx="18" fill="#0c0a13"/>
+<rect x=".5" y=".5" width="899" height="83" rx="18" fill="none" stroke="#2a2340"/>
+<text x="450" y="38" text-anchor="middle" font-size="20" font-weight="700" fill="#f2eefb">areas of interest</text>
+<text x="450" y="62" text-anchor="middle" font-size="13" fill="#8b86a0">what pulls me in</text>
+<path class="tw" style="transform-origin:561.2px 31px" d="M561.2,24 Q561.2,31 568.2,31 Q561.2,31 561.2,38 Q561.2,31 554.2,31 Q561.2,31 561.2,24Z" fill="#a78bfa"/>
+</svg>
