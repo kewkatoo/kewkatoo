@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-label="AURA — Privacy-First Voice AI Concierge">
+  <defs>
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c5cff"/>
+      <stop offset="50%" stop-color="#5b3df5"/>
+      <stop offset="100%" stop-color="#2b174f"/>
+    </linearGradient>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" rx="28" fill="#090714"/>
+  <rect x="10" y="10" width="1180" height="300" rx="24" fill="#0d0a1a" stroke="url(#borderGrad)" stroke-width="2"/>
+  <text x="50%" y="48" text-anchor="middle" fill="#f5f3ff" font-size="28" font-family="Inter, Segoe UI, Arial, sans-serif" font-weight="600">AURA — Privacy-First Voice AI Concierge</text>
+  
+<g>
+  <rect x="70" y="90" width="1060" height="180" rx="18" fill="none" stroke="#20163b" stroke-width="1.5"/>
+  <line x1="600" y1="180" x2="220" y2="130" stroke="#20163b" stroke-width="2"/><line x1="600" y1="180" x2="320" y2="220" stroke="#20163b" stroke-width="2"/><line x1="600" y1="180" x2="440" y2="130" stroke="#20163b" stroke-width="2"/><line x1="600" y1="180" x2="760" y2="130" stroke="#20163b" stroke-width="2"/><line x1="600" y1="180" x2="880" y2="220" stroke="#20163b" stroke-width="2"/><line x1="600" y1="180" x2="980" y2="130" stroke="#20163b" stroke-width="2"/>
+  <circle cx="220" cy="130" r="10" fill="#0d0a1a" stroke="#8b6cff" stroke-width="2"/><circle cx="320" cy="220" r="10" fill="#0d0a1a" stroke="#8b6cff" stroke-width="2"/><circle cx="440" cy="130" r="10" fill="#0d0a1a" stroke="#8b6cff" stroke-width="2"/><circle cx="760" cy="130" r="10" fill="#0d0a1a" stroke="#8b6cff" stroke-width="2"/><circle cx="880" cy="220" r="10" fill="#0d0a1a" stroke="#8b6cff" stroke-width="2"/><circle cx="980" cy="130" r="10" fill="#0d0a1a" stroke="#8b6cff" stroke-width="2"/>
+  <circle cx="600" cy="180" r="24" fill="none" stroke="#8b6cff" stroke-width="2.5" filter="url(#softGlow)"/>
+  <circle cx="600" cy="180" r="8" fill="#8b6cff">
+    <animate attributeName="r" values="7;10;7" dur="1.8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="600" cy="180" r="36" fill="none" stroke="#5b3df5" stroke-width="2" opacity="0.8">
+    <animate attributeName="r" values="36;56;36" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8;0.15;0.8" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="600" cy="180" r="50" fill="none" stroke="#5b3df5" stroke-width="1.5" opacity="0.5">
+    <animate attributeName="r" values="50;74;50" dur="2.3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.5;0.1;0.5" dur="2.3s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="4" fill="#8b6cff" filter="url(#softGlow)"><animateMotion dur="2.2s" repeatCount="indefinite" path="M 600 180 L 220 130"/></circle><circle r="4" fill="#8b6cff" filter="url(#softGlow)"><animateMotion dur="2.5s" repeatCount="indefinite" path="M 600 180 L 320 220"/></circle><circle r="4" fill="#8b6cff" filter="url(#softGlow)"><animateMotion dur="1.9s" repeatCount="indefinite" path="M 600 180 L 440 130"/></circle><circle r="4" fill="#8b6cff" filter="url(#softGlow)"><animateMotion dur="2.1s" repeatCount="indefinite" path="M 600 180 L 760 130"/></circle><circle r="4" fill="#8b6cff" filter="url(#softGlow)"><animateMotion dur="2.6s" repeatCount="indefinite" path="M 600 180 L 880 220"/></circle><circle r="4" fill="#8b6cff" filter="url(#softGlow)"><animateMotion dur="2.0s" repeatCount="indefinite" path="M 600 180 L 980 130"/></circle>
+</g>
+
+</svg>

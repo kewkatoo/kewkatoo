@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-label="Smart Helmet">
+  <defs>
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c5cff"/>
+      <stop offset="50%" stop-color="#5b3df5"/>
+      <stop offset="100%" stop-color="#2b174f"/>
+    </linearGradient>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" rx="28" fill="#090714"/>
+  <rect x="10" y="10" width="1180" height="300" rx="24" fill="#0d0a1a" stroke="url(#borderGrad)" stroke-width="2"/>
+  <text x="50%" y="48" text-anchor="middle" fill="#f5f3ff" font-size="28" font-family="Inter, Segoe UI, Arial, sans-serif" font-weight="600">Smart Helmet</text>
+  
+<g transform="translate(290,75)">
+  <path d="M80 140 C80 65,140 30,220 30 C300 30,360 65,360 140 L360 170 L80 170 Z" fill="none" stroke="#8b6cff" stroke-width="4"/>
+  <rect x="120" y="105" width="200" height="18" rx="9" fill="#20163b"/>
+  <circle cx="220" cy="140" r="14" fill="none" stroke="#5b3df5" stroke-width="3"/>
+  <path d="M220 140 L330 110 A120 120 0 0 0 220 20 Z" fill="#8b6cff" opacity="0.15">
+    <animateTransform attributeName="transform" type="rotate" from="0 220 140" to="360 220 140" dur="3.5s" repeatCount="indefinite"/>
+  </path>
+</g>
+<line x1="650" y1="170" x2="780" y2="100" stroke="#20163b" stroke-width="2"/><line x1="650" y1="170" x2="860" y2="140" stroke="#20163b" stroke-width="2"/><line x1="650" y1="170" x2="930" y2="200" stroke="#20163b" stroke-width="2"/><line x1="650" y1="170" x2="820" y2="245" stroke="#20163b" stroke-width="2"/>
+<circle cx="780" cy="100" r="7" fill="#0d0a1a" stroke="#8b6cff" stroke-width="2"/><circle cx="860" cy="140" r="7" fill="#0d0a1a" stroke="#8b6cff" stroke-width="2"/><circle cx="930" cy="200" r="7" fill="#0d0a1a" stroke="#8b6cff" stroke-width="2"/><circle cx="820" cy="245" r="7" fill="#0d0a1a" stroke="#8b6cff" stroke-width="2"/>
+<circle r="4" fill="#8b6cff" filter="url(#softGlow)"><animateMotion dur="2.4s" repeatCount="indefinite" path="M 650 170 L 780 100 L 860 140 L 930 200 L 820 245"/></circle>
+
+</svg>
