@@ -107,7 +107,11 @@ def wrap(title, body, sc, defs=""):
 </svg>'''
 
 
+REG = {}
+
+
 def save(name, title, body, sc, defs=""):
+    REG[name] = dict(title=title, body=body, css="".join(sc.css), defs=defs)
     os.makedirs(OUT_DIR, exist_ok=True)
     with open(os.path.join(OUT_DIR, name), "w", encoding="utf-8") as f:
         f.write(wrap(title, body, sc, defs))
@@ -164,9 +168,10 @@ def aura():
     for i in range(5):
         t0 = 0.95 + i * .32
         b.append(at(206, 190, s.g(arc, [(0, dict(o=0, x=0, s=.5)), (t0, dict(o=0, x=0, s=.5)), (t0 + .12, dict(o=1, x=8, s=.7, e="linear")),
-                                        (t0 + 1.35, dict(o=.0, x=268, s=1.7)), (9, dict(o=0))])))
+                                        (t0 + 1.35, dict(o=.0, x=122, s=1.7)), (9, dict(o=0))])))
 
     # --- hub (processing) ---------------------------------------------------------------
+    i_hub = len(b)
     hub = f'''<path d="M504 178 L504 214 Q504 236 560 236 Q616 236 616 214 L616 178 Z" fill="url(#puck)" stroke="{LINE}"/>
 <ellipse cx="560" cy="178" rx="56" ry="16" fill="#211a3b" stroke="#3a3158"/>
 <ellipse cx="560" cy="178" rx="44" ry="10.5" fill="none" stroke="#3a3158" stroke-width="3"/>
@@ -183,13 +188,14 @@ def aura():
     # intent chip with a water drop
     chip = f'''<rect x="-34" y="-18" width="68" height="36" rx="18" fill="{SURF2}" stroke="{P1}" stroke-width="1.6"/>
 <path d="M0 -11 C-7 -3 -10 1 -10 5 A10 10 0 0 0 10 5 C10 1 7 -3 0 -11Z" fill="{P1}"/><path d="M-4 4 q0 4 4 5" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" opacity=".7"/>'''
-    b.append(at(560, 132, s.g(chip, [(0, dict(o=0, x=0, y=14, s=.3)), (3.3, dict(o=0, x=0, y=14, s=.3)), (3.6, dict(o=1, x=0, y=0, s=1.12)),
+    chip_el = (at(560, 132, s.g(chip, [(0, dict(o=0, x=0, y=14, s=.3)), (3.3, dict(o=0, x=0, y=14, s=.3)), (3.6, dict(o=1, x=0, y=0, s=1.12)),
                                      (3.8, dict(o=1, x=0, y=0, s=1)), (4.1, dict(o=1, x=140, y=-26, s=1, e="linear")), (4.55, dict(o=1, x=310, y=-30, s=1, e="linear")),
                                      (4.95, dict(o=1, x=420, y=24, s=.9)), (5.1, dict(o=0, x=430, y=46, s=.5)), (9, dict(o=0))])))
-    # dotted guide line
-    b.append(f'<path d="M624 150 Q760 70 940 120" stroke="{LINE}" stroke-width="2" stroke-dasharray="3 7" fill="none" opacity=".8"/>')
+    b[i_hub:] = ['<g transform="translate(-150,0)">' + ''.join(b[i_hub:]) + '</g>']
+    b.append(f'<path d="M478 148 Q600 66 706 118" stroke="{LINE}" stroke-width="2" stroke-dasharray="3 7" fill="none" opacity=".8"/>')
 
     # --- butler + tablet ------------------------------------------------------------------
+    i_but = len(b)
     butler = f'''
 <path d="M790 312 C790 258 818 236 850 228 L910 228 C942 236 970 258 970 312 Z" fill="#17122a" stroke="{LINE}"/>
 <path d="M862 228 L880 270 L898 228 Z" fill="#f1ecf8"/><path d="M846 228 L862 228 L874 252 Z M914 228 L898 228 L886 252 Z" fill="#241d3f"/>
@@ -238,6 +244,8 @@ def aura():
     b.append(at(1052, 220, s.g(finger, [(0, dict(o=0, x=34, y=80)), (5.3, dict(o=0, x=34, y=80)), (5.55, dict(o=1, x=10, y=34)), (5.82, dict(o=1, x=0, y=8)), (5.9, dict(o=1, x=0, y=0, s=.95)),
                                         (6.2, dict(o=1, x=2, y=24, s=1)), (6.5, dict(o=0, x=34, y=80)), (9, dict(o=0, x=34, y=80))])))
 
+    b[i_but:] = ['<g transform="translate(-230,0)">' + ''.join(b[i_but:]) + '</g>']
+    b.append('<g transform="translate(-150,0)">' + chip_el + '</g>')
     css = "@keyframes spin{to{stroke-dashoffset:-252}}"
     s.css.append(css)
     save("aura_anim.svg", "AURA \u2014 Voice AI Concierge", "".join(b), s, defs)
@@ -781,17 +789,17 @@ def bus():
 
     b.append('</g>')
     # idle panel (waiting for a bus) sits under the data panel
-    qx = 796
-    sk = [f'<rect x="{qx}" y="70" width="360" height="228" rx="18" fill="{SURF}" fill-opacity=".55" stroke="{LINE}" stroke-dasharray="4 6"/>',
+    qx = 784
+    sk = [f'<rect x="{qx}" y="70" width="296" height="228" rx="18" fill="{SURF}" fill-opacity=".55" stroke="{LINE}" stroke-dasharray="4 6"/>',
           s.el("circle", f'cx="{qx + 34}" cy="104" r="5"', [(0, dict(fill=P1)), (.9, dict(fill="#2a2340")), (1.8, dict(fill=P1)), (2.7, dict(fill="#2a2340")), (3.6, dict(fill=P1)), (4.5, dict(fill="#2a2340")), (5.4, dict(fill=P1)), (D, dict(fill=P1))]),
           T(qx + 52, 109, "waiting for a bus\u2026", 14, MUT, 600, "start")]
     for i, (y, w1) in enumerate([(146, 150), (200, 90), (248, 170)]):
         sk.append(f'<rect x="{qx + 28}" y="{y}" width="70" height="8" rx="4" fill="#241d3f"/><rect x="{qx + 28}" y="{y + 20}" width="{w1}" height="14" rx="7" fill="#1d1832"/>')
     b.append("".join(sk))
     # ---- info panel ----
-    pn = [f'<rect x="{qx}" y="70" width="360" height="228" rx="18" fill="{SURF}" stroke="{LINE}"/>',
+    pn = [f'<rect x="{qx}" y="70" width="296" height="228" rx="18" fill="{SURF}" stroke="{LINE}"/>',
           f'<circle cx="{qx + 34}" cy="104" r="14" fill="{GREEN}" fill-opacity=".16" stroke="{GREEN}" stroke-width="1.6"/><path d="M{qx + 27.5} 104.5 l4.8 4.8 l9 -10" stroke="{GREEN}" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>',
-          T(qx + 58, 109, "Bus identified", 16, TXT, 700, "start"), f'<path d="M{qx + 24} 128 H{qx + 336}" stroke="{LINE}"/>']
+          T(qx + 58, 109, "Bus identified", 16, TXT, 700, "start"), f'<path d="M{qx + 24} 128 H{qx + 272}" stroke="{LINE}"/>']
     rows = [(142, "bus number", PLATE, 21, MONO), (196, "route", "117A", 21, MONO), (196, "", "", 0, None), (246, "destination", "Ernakulam \u2192 Aluva", 18, None)]
     def row(y, label, val, size, fam, delay, extra=""):
         r = T(qx + 28, y, label, 11.5, MUT, 600, "start") + T(qx + 28, y + 26, val, size, TXT, 800 if fam else 700, "start", fam=fam)
