@@ -50,6 +50,19 @@
   </a>
 </p>
 
+<p align="center"><img src="assets/t-exp.svg" alt="experience" width="100%"/></p>
+<p align="center"><img src="assets/exp.svg" alt="Ashok Leyland internship and SSR initiative" width="100%"/></p>
+
+<p align="center"><img src="assets/t-stack.svg" alt="stack" width="100%"/></p>
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=py,r,js,ts,react,fastapi,mongodb,postgres,pytorch,tensorflow,sklearn,opencv,matlab,arduino,raspberrypi,git,github,linux&theme=dark&perline=9" alt="tech stack icons"/>
+</p>
+<p align="center"><img src="assets/also.svg" alt="more of the stack" width="100%"/></p>
+
+<p align="center"><img src="assets/t-int.svg" alt="areas of interest" width="100%"/></p>
+<p align="center"><img src="assets/interests.svg" alt="areas of interest" width="100%"/></p>
+
+<p align="center"><img src="assets/t-contact.svg" alt="say hi" width="100%"/></p>
 <p align="center">
   <a href="mailto:aditya.achary0909@gmail.com"><img src="https://img.shields.io/badge/mail-say%20hi-8b5cf6?style=for-the-badge&logo=gmail&logoColor=white&labelColor=110f1b" alt="Email"/></a>
   <a href="https://www.linkedin.com/in/aditya-achary/"><img src="https://img.shields.io/badge/linkedin-connect-8b5cf6?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=110f1b" alt="LinkedIn"/></a>
